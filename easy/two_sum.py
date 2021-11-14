@@ -6,7 +6,7 @@ from random import randint
 
 
 def get_indices(nums: list[int], target: int) -> list[int]:
-    table = {}
+    table: dict[int, int] = {}
     for i in range(len(nums)):
         second_number = target - nums[i]
         if second_number in table:
@@ -15,8 +15,8 @@ def get_indices(nums: list[int], target: int) -> list[int]:
 
 
 def main():
-    nums = [randint(0, 20) for _ in range(20)]
-    target = randint(0, 40)
+    nums: list[int] = [randint(0, 20) for _ in range(20)]
+    target: int = randint(0, 40)
     print(f"{nums}\n{target}")
     if get_indices(nums, target):
         print(f"{get_indices(nums, target)}")
