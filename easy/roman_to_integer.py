@@ -6,7 +6,8 @@ Given a roman numeral, convert it to an integer.
 """
 
 
-def convert_roman(s: str):
+# Reverse string (Runtime: 49 ms, Memory Usage: 14.3 MB)
+def convert_roman(s: str) -> int:
     roman_numbers: dict[str, int] = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
     s: str = s[::-1]
     total: int = 0
